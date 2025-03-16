@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">LEGO Store</string>
     <string name="app_logo">App Logo</string>
+    
+    <!-- Auth -->
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
@@ -17,4 +19,31 @@
     <string name="registration_failed">Registration failed: %1$s</string>
     <string name="login_success">Login successful!</string>
     <string name="login_failed">Login failed: %1$s</string>
+
+    <!-- Products -->
+    <string name="product_image">Product Image</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="view_cart">View Cart</string>
+    <string name="product_added">Product added to cart</string>
+    <string name="product_details">Product Details</string>
+
+    <!-- Cart -->
+    <string name="cart">Cart</string>
+    <string name="remove_from_cart">Remove from Cart</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="total">Total:</string>
+    <string name="checkout">Checkout</string>
+    <string name="cart_empty">Your cart is empty</string>
+
+    <!-- Checkout -->
+    <string name="delivery_information">Delivery Information</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="order_success">Order placed successfully!</string>
+    <string name="order_failed">Failed to place order: %1$s</string>
+    <string name="invalid_address">Please enter a valid delivery address</string>
+    <string name="invalid_phone">Please enter a valid phone number</string>
 </resources> 

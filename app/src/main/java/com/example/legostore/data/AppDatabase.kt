@@ -4,12 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.legostore.data.dao.UserDao
-import com.example.legostore.data.entity.User
+import com.example.legostore.data.dao.*
+import com.example.legostore.data.entity.*
 
-@Database(entities = [User::class], version = 1)
+@Database(
+    entities = [
+        User::class,
+        Product::class,
+        CartItem::class,
+        Order::class,
+        OrderItem::class
+    ],
+    version = 1
+)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
+    abstract fun productDao(): ProductDao
+    abstract fun cartDao(): CartDao
+    abstract fun orderDao(): OrderDao
 
     companion object {
         @Volatile
@@ -21,7 +33,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "lego_store_db"
-                ).build()
+                )
+                .createFromAsset("database/initial_data.db")
+                .build()
                 INSTANCE = instance
                 instance
             }
